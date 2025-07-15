@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('presh');
+    const [author, setAuthor] = useState('');
     const history = useHistory();
 
 
