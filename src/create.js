@@ -13,7 +13,7 @@ const Create = () => {
      const Blog = { title, body, author};
    
 
-     fetch('http://localhost:5000/blogssssss', {
+     fetch('http://127.0.0.1:8000/api/blogs/', {
         method: 'post',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(Blog)

@@ -3,11 +3,11 @@ import useFetch from './useFetch';
 
 const BlogDetails = () => {
     const { id } = useParams()
-    const { data:blog, error, isPending} = useFetch('http://localhost:5000/blogs/' + id);
+    const { data:blog, error, isPending} = useFetch('http://127.0.0.1:8000/api/blogs/' + id);
     const history = useHistory();
 
     const handleClick= () => {
-     fetch('http://localhost:5000/blogs/' + blog.id, {
+     fetch('http://127.0.0.1:8000/api/blogs/' + blog.id, {
         method:'DELETE'
      }).then(() =>{
       history.push('/');
@@ -31,3 +31,4 @@ const BlogDetails = () => {
 }
 
 export default BlogDetails;
+
